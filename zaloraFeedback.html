@@ -79,11 +79,11 @@
                                     <tr>
                                         <th style="width: 50%;">
                                             <!-- <p style="font-size: 5rem; cursor: pointer;" class="d-flex justify-content-center" onclick="good()">😄</p> -->
-                                            <img src="https://cdn.yellowmessenger.com/og5iaNALPUGZ1640754892598.png" alt="" style="width: 100px; margin: 15px;" onclick="good()">
+                                            <img src="https://cdn.yellowmessenger.com/og5iaNALPUGZ1640754892598.png" alt="" style="width: 100px; margin: 15px; cursor: pointer;" onclick="good()">
                                         </th>
                                         <th style="width: 50%;">
                                             <!-- <p style="font-size: 5rem; cursor: pointer;" class="d-flex justify-content-center" onclick="bad()">😔</p> -->
-                                            <img src="https://cdn.yellowmessenger.com/Ffr09uyz1jpi1640754863129.png" alt="" style="width: 95px; margin: 15px;" onclick="bad()">
+                                            <img src="https://cdn.yellowmessenger.com/Ffr09uyz1jpi1640754863129.png" alt="" style="width: 95px; margin: 15px; cursor: pointer;" onclick="bad()">
                                         </th>
                                     </tr>
                                     <tr style="width: 100%;">
@@ -106,13 +106,13 @@
 
                       <div class="hide" id="happy-emoji">
                         <div class="d-flex  justify-content-center">
-                            <img src="https://cdn.yellowmessenger.com/og5iaNALPUGZ1640754892598.png" alt="" style="width: 74px; margin-top: 20px;">
+                            <img src="https://cdn.yellowmessenger.com/og5iaNALPUGZ1640754892598.png" alt="" style="width: 74px; margin-top: 20px; cursor: pointer;">
                         </div>
                       </div>
 
                       <div class="hide" id="sad-emoji">
                         <div class="d-flex  justify-content-center">
-                            <img src="https://cdn.yellowmessenger.com/Ffr09uyz1jpi1640754863129.png" alt="" style="width: 74px; margin-top: 20px;">
+                            <img src="https://cdn.yellowmessenger.com/Ffr09uyz1jpi1640754863129.png" alt="" style="width: 74px; margin-top: 20px; cursor: pointer;">
                         </div>
                       </div>
 
@@ -279,7 +279,7 @@
                 data.radioButtonValue = radioFeedback
                 data.submitDetails = submitDetails;
            
-                console.log('Submit Details---->>', );
+                console.log('Submit Details---->>', data);
                 var feedbackDetails = {}
                 var raw = JSON.stringify({
                     "details": {
@@ -290,7 +290,7 @@
                     }
                 });
 
-                console.log(raw, 'raw~~~~~~>>')
+                console.log('raw~~~~~~>>',raw)
 
                 document.getElementById('feedback').value = ''
                 // $("#form").trigger("reset");
@@ -327,6 +327,7 @@
                     "textareaValue" : textareaValue
                     }
                 });
+                console.log('raw~~~~~~>>',raw)
 
                 document.getElementById('feedback').value = ''
                 $("#form").trigger("reset");
@@ -365,6 +366,7 @@
                     "textareaValue" : textareaValue
                     }
                 });
+                console.log('raw~~~~~~>>',raw)
 
                 document.getElementById('feedback').value = ''
                 $("#form").trigger("reset");
@@ -404,6 +406,7 @@
                     }
                 });
 
+                console.log('raw~~~~~~>>',raw)
                 document.getElementById('feedback').value = ''
                 $("#form").trigger("reset");
                 
