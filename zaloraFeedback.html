@@ -79,11 +79,11 @@
                                     <tr>
                                         <th style="width: 50%;">
                                             <!-- <p style="font-size: 5rem; cursor: pointer;" class="d-flex justify-content-center" onclick="good()">😄</p> -->
-                                            <img src="https://cdn.yellowmessenger.com/K7wv6DZB2fal1639741853007.png" alt="" style="width: 100px; margin: 15px;" onclick="good()">
+                                            <img src="https://cdn.yellowmessenger.com/og5iaNALPUGZ1640754892598.png" alt="" style="width: 100px; margin: 15px;" onclick="good()">
                                         </th>
                                         <th style="width: 50%;">
                                             <!-- <p style="font-size: 5rem; cursor: pointer;" class="d-flex justify-content-center" onclick="bad()">😔</p> -->
-                                            <img src="https://cdn.yellowmessenger.com/wGLrYkRt2Rpc1639741944313.png" alt="" style="width: 110px; margin: 15px;" onclick="bad()">
+                                            <img src="https://cdn.yellowmessenger.com/Ffr09uyz1jpi1640754863129.png" alt="" style="width: 95px; margin: 15px;" onclick="bad()">
                                         </th>
                                     </tr>
                                     <tr style="width: 100%;">
@@ -106,13 +106,13 @@
 
                       <div class="hide" id="happy-emoji">
                         <div class="d-flex  justify-content-center">
-                            <img src="https://cdn.yellowmessenger.com/K7wv6DZB2fal1639741853007.png" alt="" style="width: 74px; margin-top: 20px;" onclick="good()">
+                            <img src="https://cdn.yellowmessenger.com/og5iaNALPUGZ1640754892598.png" alt="" style="width: 74px; margin-top: 20px;">
                         </div>
                       </div>
 
                       <div class="hide" id="sad-emoji">
                         <div class="d-flex  justify-content-center">
-                            <img src="https://cdn.yellowmessenger.com/wGLrYkRt2Rpc1639741944313.png" alt="" style="width: 74px; margin-top: 20px;" onclick="good()">
+                            <img src="https://cdn.yellowmessenger.com/Ffr09uyz1jpi1640754863129.png" alt="" style="width: 74px; margin-top: 20px;">
                         </div>
                       </div>
 
@@ -121,7 +121,7 @@
                             <div class="col-lg-12" >
                                 <!-- <p style="font-size: 4rem; cursor: pointer;" class="d-flex justify-content-center">😔</p> -->
                                <div class="d-flex justify-content-center">
-                                <img src="https://cdn.yellowmessenger.com/K7wv6DZB2fal1639741853007.png" alt="happy" style="font-size: 4rem; cursor: pointer; width: 74px;" onclick="bad()">
+                                <img src="https://cdn.yellowmessenger.com/og5iaNALPUGZ1640754892598.png" alt="happy" style="font-size: 4rem; cursor: pointer; width: 74px;">
                                </div>
                                 <p class="d-flex justify-content-center fw-bold" style="font-size:large; margin: 0; padding: 0" >Yayy! We are happy to hear that.</p>
                             </div>
@@ -156,7 +156,7 @@
                                 <div class="col-lg-12" >
                                     <!-- <p style="font-size: 4rem; cursor: pointer;" class="d-flex justify-content-center">😔</p> -->
                                    <div class="d-flex justify-content-center">
-                                    <img src="https://cdn.yellowmessenger.com/wGLrYkRt2Rpc1639741944313.png" alt="happy" style="font-size: 4rem; cursor: pointer; width: 74px;" onclick="bad()">
+                                    <img src="https://cdn.yellowmessenger.com/Ffr09uyz1jpi1640754863129.png" alt="happy" style="font-size: 4rem; cursor: pointer; width: 74px; margin-top: 2.3px;">
                                    </div>
                                     <p class="d-flex justify-content-center fw-bold" style="font-size:large; margin: 0; padding: 0" >Uh-oh, we are sorry</p>
                                 </div>
@@ -213,6 +213,7 @@
         var reason = document.getElementsByName("reason");
         var greason = document.getElementsByName("greason");
         function good() {
+            console.log('good loop')
             feedback = 'good';
             $('#emotican').hide();
             $('#good-feedback').show();
@@ -226,6 +227,7 @@
         }
 
         function bad() {
+            console.log('bad loop')
             $('#happy-emoji').hide();
             $('#emotican').hide();
             $("#textArea").hide();
@@ -383,7 +385,9 @@
                 $("#greeting").show();
 
             }else if((feedback =='bad') && (radioFeedback == 'Other Feedback') && (textareaValue !== '')) {
+                console.log('In bad condition')
                 $("#error").hide();
+                $('#sad-emoji').hide();
                 $("#textArea").css('margin-top', '50px')
                 data.feedback = feedback;
                 data.radioButtonValue = radioFeedback
